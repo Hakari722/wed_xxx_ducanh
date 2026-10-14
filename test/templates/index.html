@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MemoryHub</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header class="top">
+        <a class="brand" href="/">
+            <b>▶</b>
+            <span>
+                Memory<span class="orange">Hub</span>
+                <small>KHO VIDEO CỦA CHÚNG TA</small>
+            </span>
+        </a>
+
+        <nav>
+            <a class="active" href="/">Trang chủ</a>
+            <a href="#latest">Video mới</a>
+        </nav>
+
+        <div class="tools">
+            <label class="search">
+                ⌕
+                <input id="search" placeholder="Tìm video...">
+            </label>
+
+            <a href="/admin/login">♙ Admin</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="heading">
+                <h1>VIDEO NỔI BẬT</h1>
+                <i></i>
+            </div>
+
+            <div id="featured" class="featured"></div>
+        </section>
+
+        <section id="latest" class="latest">
+            <div class="heading">
+                <h2>VIDEO MỚI CẬP NHẬT</h2>
+                <span id="count">Đang tải...</span>
+            </div>
+
+            <div id="videos" class="videos"></div>
+
+            <div id="empty" class="empty hidden">
+                <b>▶</b>
+                <h3>Chưa có video nào</h3>
+                <p>Video do Admin đăng sẽ xuất hiện tại đây.</p>
+            </div>
+
+            <p id="none" class="empty hidden">
+                Không tìm thấy video phù hợp.
+            </p>
+        </section>
+    </main>
+
+    <div id="modal" class="modal hidden">
+        <div class="player">
+            <button id="close">×</button>
+
+            <video id="player" controls playsinline></video>
+
+            <h2 id="ptitle"></h2>
+            <p id="pdesc"></p>
+        </div>
+    </div>
+
+    <footer>
+        <b>Memory<span class="orange">Hub</span></b>
+        <span>Lưu giữ những khoảnh khắc đáng nhớ.</span>
+        <a href="/admin/login">Khu vực quản trị</a>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
